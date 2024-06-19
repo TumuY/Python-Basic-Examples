@@ -14,10 +14,10 @@ class user():
     userlist = []
 
     def __init__(self,userNick,userPw):
-        self.kulNick = userNick
-        self.kulPas = userPw
+        self.usernick = userNick
+        self.userpw = userPw
         user.Add(self)
 
     @classmethod
-    def Add(cls,userN):
-        user.userlist.append(userN)
+    def Add(cls,usern):
+        user.userlist.append(usern)
