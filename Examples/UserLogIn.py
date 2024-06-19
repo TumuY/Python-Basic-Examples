@@ -16,8 +16,8 @@ class user():
     def __init__(self,userNick,userPw):
         self.kulNick = userNick
         self.kulPas = userPw
-        user.Ekle(self)
+        user.Add(self)
 
     @classmethod
-    def Ekle(cls,userN):
+    def Add(cls,userN):
         user.userlist.append(userN)
