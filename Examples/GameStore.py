@@ -6,14 +6,14 @@ class Account():
 
     @property
     def balance(self):
-        return self.accountbalance
+        return self.__accountbalance
 
     @balance.setter
     def balance(self, value):
-        self.accountbalance += value
+        self.__accountbalance += value
 
     def starter(self):
-        self.accountbalance = 0
+        self.__accountbalance = 0
 
 
 
@@ -32,10 +32,11 @@ class Store():
         a = input("Game : ")
         for game in Store.games:
             if a == game[0]:
-                if account.accountbalance >= game[1]:
-                    account.accountbalance = account.accountbalance - game[1]
-                    print("You succesfully buyed the game : {}, your new balance is {}".format(game[0],account.accountbalance))
+                if account.balance >= game[1]:
+                    account.balance = account.balance - game[1]
+                    print("You succesfully buyed the game : {}, your new balance is {}".format(game[0],account.balance))
                 else:
                     print("Insufficient balance")
             else:
                 print("The game you are looking for is not available.")
+
