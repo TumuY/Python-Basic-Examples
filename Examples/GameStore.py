@@ -28,7 +28,7 @@ class Store():
         Store.games.append((self.game,self.price))
 
     @classmethod
-    def BuyGame(cls, account,):
+    def BuyGame(cls, account):
         a = input("Game : ")
         for game in Store.games:
             if a == game[0]:
